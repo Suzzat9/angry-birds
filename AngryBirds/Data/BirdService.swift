@@ -31,6 +31,7 @@ class BirdService {
                 }
                 
                 do {
+                    
                     let birdResult = try JSONDecoder().decode(BirdResult.self, from: data)
                     DispatchQueue.main.async { completion(birdResult.birds, nil) }
                 } catch (let error) {
